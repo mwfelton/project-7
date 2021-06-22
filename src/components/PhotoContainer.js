@@ -3,6 +3,7 @@ import Photo from './Photo';
 
 const PhotoContainer = (props) => {
 
+  // let results = match.params.search;
   const results = props.data;
   let pics = results.map(pic => 
     <Photo url={`https://live.staticflickr.com/${pic.server}/${pic.id}_${pic.secret}.jpg`} key={pic.id}/>

@@ -55,14 +55,27 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="container">
-          <SearchForm onSearch={this.performSearch}/>
-          <Nav />
+          {/* <SearchForm onSearch={this.performSearch}/>
+          <Nav /> */}
           {/* <PhotoContainer data={this.state.photos}/> */}
 
           <Switch>
-            
-          <Route path={`/`} render={ () => <PhotoContainer data={this.state.photos}/> }/>
-          <Route path={`/tulips`} render={ () => <PhotoContainer data={this.state.nav1}/> }/>
+          
+            <Route path="/">
+              <SearchForm onSearch={this.performSearch}/>
+              <Nav />
+              <PhotoContainer data={this.state.photos}/>
+            </Route>
+
+            <Route path={`/search/:search`} render={ () => <SearchForm onSearch={this.performSearch}/> }/>
+
+
+           
+
+
+          {/* <Route path={`/flowers/:button`} render={ () => <PhotoContainer data={this.state.nav1}/> }/>
+          <Route path={`/search/:search`} render={ () => <PhotoContainer data={this.state.nav1}/> }/>
+ */}
 
             {/* <Route path="/:buttonName" component={PhotoContainer} /> */}
 
