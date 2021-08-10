@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { 
     BrowserRouter as Router,
-  Redirect,
+    useHistory,
+    Redirect,
     Route,
     Switch
 } from 'react-router-dom';
